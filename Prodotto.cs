@@ -14,6 +14,7 @@ namespace csharp_oop_shop
         public string descrizione;
         public double prezzo;
         public int iva;
+        public double prezzoTotale;
 
         public Prodotto(string Name, string Description, double Price, int Iva)
         {
@@ -22,12 +23,19 @@ namespace csharp_oop_shop
             descrizione = Description;
             prezzo = Price;
             iva = Iva;
+            prezzoTotale = GeneratedPrice(Price, Iva);
         }
 
         private int GeneratedCode()
         {
-            Random random = new Random();
+            Random random = new();
             return random.Next(1, 99999999);
+        }
+
+        private double GeneratedPrice(double Price, int Iva) 
+        {
+            double totalPrice = (Price * (100 + Iva)) / 100;
+            return totalPrice;
         }
     }
 

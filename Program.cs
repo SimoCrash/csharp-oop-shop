@@ -14,11 +14,14 @@ Console.WriteLine(cellulare.nome);
 Console.WriteLine(cellulare.descrizione);
 Console.WriteLine(cellulare.prezzo);
 Console.WriteLine(cellulare.iva);
+Console.WriteLine(cellulare.prezzoTotale);
 Console.WriteLine(cellulare2.codice);
 Console.WriteLine(cellulare2.nome);
 Console.WriteLine(cellulare2.descrizione);
 Console.WriteLine(cellulare2.prezzo);
 Console.WriteLine(cellulare2.iva);
+Console.WriteLine(cellulare2.prezzoTotale);
+
 
 
 
