@@ -1,9 +1,24 @@
 ﻿using csharp_oop_shop;
 
-Prodotto cellulare = new Prodotto();
+Prodotto cellulare = new Prodotto(23435364, "OnePlus", "anno 2021", 399.00, 22);
+Prodotto cellulare2 = new Prodotto(36545345, "iPhone 13", "anno 2022", 1099.00, 22);
 
-cellulare.smartPhone(23435364, "OnePlus", "anno 2021", 399.00, 22);
-Console.WriteLine(cellulare);
+////cellulare.Prodotto();
+//cellulare.codice = 23435364;
+//cellulare.nome = "OnePlus";
+//cellulare.descrizione = "anno 2021";
+//cellulare.prezzo = 399.00;
+//cellulare.iva = 22;
+Console.WriteLine(cellulare.codice);
+Console.WriteLine(cellulare.nome);
+Console.WriteLine(cellulare.descrizione);
+Console.WriteLine(cellulare.prezzo);
+Console.WriteLine(cellulare.iva);
+Console.WriteLine(cellulare2.codice);
+Console.WriteLine(cellulare2.nome);
+Console.WriteLine(cellulare2.descrizione);
+Console.WriteLine(cellulare2.prezzo);
+Console.WriteLine(cellulare2.iva);
 
 
 

@@ -14,7 +14,11 @@ namespace csharp_oop_shop
         public double prezzo;
         public int iva;
 
-        public void smartPhone (int Code, string Name, string Description, double Price, int Iva) 
+        public Prodotto()
+        {
+        }
+
+        public Prodotto (int Code, string Name, string Description, double Price, int Iva) 
         { 
             codice = Code;
             nome = Name;
