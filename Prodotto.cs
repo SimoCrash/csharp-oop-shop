@@ -24,7 +24,7 @@ namespace csharp_oop_shop
             iva = Iva;
         }
 
-        public int GeneratedCode()
+        private int GeneratedCode()
         {
             Random random = new Random();
             return random.Next(1, 99999999);
