@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace csharp_oop_shop
     {
         public int codice;
         public string nome;
+        public string nomeCompleto;
         public string descrizione;
         public double prezzo;
         public int iva;
@@ -20,6 +22,7 @@ namespace csharp_oop_shop
         {
             codice = GeneratedCode();
             nome = Name;
+            nomeCompleto = FullName(Convert.ToString(GeneratedCode()), Name);
             descrizione = Description;
             prezzo = Price;
             iva = Iva;
@@ -36,6 +39,11 @@ namespace csharp_oop_shop
         {
             double totalPrice = (Price * (100 + Iva)) / 100;
             return totalPrice;
+        }
+
+        private string FullName(string codeadd, string name)
+        {
+            return codeadd + name;
         }
     }
 
