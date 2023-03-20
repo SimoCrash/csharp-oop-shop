@@ -1,7 +1,7 @@
 ﻿using csharp_oop_shop;
 
-Prodotto cellulare = new Prodotto(23435364, "OnePlus", "anno 2021", 399.00, 22);
-Prodotto cellulare2 = new Prodotto(36545345, "iPhone 13", "anno 2022", 1099.00, 22);
+Prodotto cellulare = new Prodotto("OnePlus", "anno 2021", 399.00, 22);
+Prodotto cellulare2 = new Prodotto("iPhone 13", "anno 2022", 1099.00, 22);
 
 ////cellulare.Prodotto();
 //cellulare.codice = 23435364;

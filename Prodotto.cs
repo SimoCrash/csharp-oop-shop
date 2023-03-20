@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +15,19 @@ namespace csharp_oop_shop
         public double prezzo;
         public int iva;
 
-        public Prodotto()
+        public Prodotto(string Name, string Description, double Price, int Iva)
         {
-        }
-
-        public Prodotto (int Code, string Name, string Description, double Price, int Iva) 
-        { 
-            codice = Code;
+            codice = GeneratedCode();
             nome = Name;
             descrizione = Description;
             prezzo = Price;
             iva = Iva;
+        }
+
+        public int GeneratedCode()
+        {
+            Random random = new Random();
+            return random.Next(1, 99999999);
         }
     }
 
