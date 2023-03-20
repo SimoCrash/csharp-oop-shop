@@ -22,7 +22,7 @@ namespace csharp_oop_shop
         {
             codice = GeneratedCode();
             nome = Name;
-            nomeCompleto = FullName(Convert.ToString(GeneratedCode()), Name);
+            nomeCompleto = FullName(Convert.ToString(this.codice), Name);
             descrizione = Description;
             prezzo = Price;
             iva = Iva;
