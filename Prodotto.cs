@@ -3,6 +3,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,11 +23,55 @@ namespace csharp_oop_shop
         {
             codice = GeneratedCode();
             nome = Name;
-            nomeCompleto = FullName(Convert.ToString(this.codice), Name);
+            nomeCompleto = FullName(Convert.ToString(this.codice), Name); //come si fa per stampare il nome completo con il nome inserito in setName()?
             descrizione = Description;
             prezzo = Price;
             iva = Iva;
-            prezzoTotale = GeneratedPrice(Price, Iva);
+            prezzoTotale = GeneratedPrice(Price, Iva); //come si fa per stampare il prezzo totale con l'aliquota inserita in setIva()?
+        }
+        public int getCode()
+        {
+            return this.codice;
+        }
+
+        public string getName() 
+        { 
+            return this.nome;
+        }
+
+        public string setName(string Value)
+        {
+            return this.nome = Value;
+        }
+
+        public string getDescription()
+        {
+            return this.descrizione;
+        }
+
+        public string setDescription(string Value)
+        {
+            return this.descrizione = Value;
+        }
+
+        public double getPrice()
+        {
+            return this.prezzo;
+        }
+
+        public double setPrice(double Value)
+        {
+            return this.prezzo = Value;
+        }
+
+        public int getIva()
+        {
+            return this.iva;
+        }
+
+        public int setIva(int Value)
+        {
+            return this.iva = Value;
         }
 
         private int GeneratedCode()
